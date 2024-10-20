@@ -1,20 +1,20 @@
-# Evaluación1 - Gestión de Biblioteca ??
+# EvaluaciÃ³n1 - GestiÃ³n de Biblioteca ??
 
-## Descripción del Proyecto
-Esta es una aplicación web simplificada de gestión de biblioteca desarrollada en **ASP.NET MVC** con **C#**. Permite a los usuarios gestionar libros y autores mediante una interfaz amigable. Se conectó a una base de datos SQL Server utilizando **Entity Framework**.
+## DescripciÃ³n del Proyecto
+Esta es una aplicaciÃ³n web simplificada de gestiÃ³n de biblioteca desarrollada en **ASP.NET MVC** con **C#**. Permite a los usuarios gestionar libros y autores mediante una interfaz amigable. Se conectÃ³ a una base de datos SQL Server utilizando **Entity Framework**.
 
 ---
 
 ## Funcionalidades Principales
-1. **Página Principal**:
+1. **PÃ¡gina Principal**:
    - Ver lista de libros disponibles.
    - Agregar un nuevo libro.
    - Agregar un nuevo autor.
 
-2. **Gestión de Libros**:
-   - Formulario para agregar un libro indicando el **título** y el **autor** (seleccionado de una lista desplegable).
+2. **GestiÃ³n de Libros**:
+   - Formulario para agregar un libro indicando el **tÃ­tulo** y el **autor** (seleccionado de una lista desplegable).
 
-3. **Gestión de Autores**:
+3. **GestiÃ³n de Autores**:
    - Formulario para agregar un nuevo autor indicando su **nombre**.
 
 ---
@@ -27,13 +27,13 @@ Esta es una aplicación web simplificada de gestión de biblioteca desarrollada en
   ```bash
   git clone https://github.com/jerikson-beep/evaluacion1.git
 
-Pasos para Configurar y Ejecutar la Aplicación
+Pasos para Configurar y Ejecutar la AplicaciÃ³n
 Configura la base de datos:
 
 Abre SQL Server Management Studio (SSMS).
-Ejecuta el script libreriaBD_script.sql que se encuentra en la carpeta raíz del proyecto para crear las tablas necesarias:
+Ejecuta el script libreriaBD_script.sql que se encuentra en la carpeta raÃ­z del proyecto para crear las tablas necesarias:
 sql
-Copiar código
+Copiar cÃ³digo
 -- Script de ejemplo
 CREATE DATABASE LibreriaBD;
 USE LibreriaBD;
@@ -46,47 +46,49 @@ CREATE TABLE Libros (
     Titulo NVARCHAR(100) NOT NULL,
     AutorID INT FOREIGN KEY REFERENCES Autores(AutorID)
 );
-Configura la cadena de conexión:
+Configura la cadena de conexiÃ³n:
 
-En Visual Studio, abre el archivo appsettings.json o Web.config (según corresponda) y asegúrate de que la cadena de conexión sea correcta:
+En Visual Studio, abre el archivo appsettings.json o Web.config (segÃºn corresponda) y asegÃºrate de que la cadena de conexiÃ³n sea correcta:
 
   <connectionStrings>
     <add name="BibliotecaContext" connectionString="Server=(localdb)\MSSQLLocalDB;Database=bibliotecabd;Trusted_Connection=True;" providerName="System.Data.SqlClient" />
   </connectionStrings>
   
-  Ejecuta la Aplicación:
+  Ejecuta la AplicaciÃ³n:
 
 Abre el proyecto en Visual Studio.
 Restaura los paquetes NuGet necesarios.
-Presiona F5 para ejecutar la aplicación en el navegador.
+Presiona F5 para ejecutar la aplicaciÃ³n en el navegador.
 
 ## Capturas de Pantalla
 
 **imagen 1**  
 ![
-![Página Principal](imagen
-Página Principal](imagenes/imagen1.jpg)
+![PÃ¡gina Principal](imagen
+PÃ¡gina Principal](imagenes/imagen1.jpg)
 
 **imagen 2**  
 ![
-![Página Principal](imagen
-Página Principal](imagenes/imagen2.jpg)
+![PÃ¡gina Principal](imagen
+PÃ¡gina Principal](imagenes/imagen2.jpg)
 **imagen 3**  
 ![
-![Página Principal](imagen
-Página Principal](imagenes/imagen3.jpg)
+![PÃ¡gina Principal](imagen
+PÃ¡gina Principal](imagenes/imagen3.jpg)
 **imagen 4**  
 ![
-![Página Principal](imagen
-Página Principal](imagenes/imagen4.jpg)
+![PÃ¡gina Principal](imagen
+PÃ¡gina Principal](imagenes/imagen4.jpg)
 **imagen 5**  
 ![
-![Página Principal](imagen
-Página Principal](imagenes/imagen5.jpg)
+![PÃ¡gina Principal](imagen
+PÃ¡gina Principal](imagenes/imagen5.jpg)
 **imagen 6**  
 ![
-![Página Principal](imagen
-Página Principal](imagenes/imagen6.jpg)
+![PÃ¡gina Principal](imagen
+PÃ¡gina Principal](imagenes/imagen6.jpg)
+
+
 
 +------------------+       1           *      +----------------+
 |     Autores      |--------------------------|     Libros      |
@@ -95,19 +97,23 @@ Página Principal](imagenes/imagen6.jpg)
 | Nombre           |                          | Titulo          |
 +------------------+                          | AutorID (FK)     |
                                               +----------------+
-Descripción del Diagrama ER
+
+
+
+DescripciÃ³n del Diagrama ER
 Autores :
-Tiene un identificador único AutorIDcomo Clave Primaria (PK) .
+Tiene un identificador Ãºnico AutorIDcomo Clave Primaria (PK) .
 Guarda el nombre del autor .
 Libros :
-Tiene un identificador único IDcomo **Clave Primaria (PClave Primaria (PK) .
-Guarda el título del libro .
-AutorIDes una **Clave FoClave Foránea (FK)Autores , estableciendo una relación **uno a muchos (1uno a muchos (1
+Tiene un identificador Ãºnico IDcomo **Clave Primaria (PClave Primaria (PK) .
+Guarda el tÃ­tulo del libro .
+AutorIDes una **Clave FoClave ForÃ¡nea (FK)Autores , estableciendo una relaciÃ³n **uno a muchos (1uno a muchos (1
 ) entre a
 
 Enlace al Repositorio
 https://github.com/jerikson-beep/evaluacion1.git
+
 Autor
 Jerikson Andrey Acero
-Proyecto de Evaluación - ASP.NET MVC
+Proyecto de EvaluaciÃ³n - ASP.NET MVC
 
