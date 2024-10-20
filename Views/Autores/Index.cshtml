@@ -1,0 +1,28 @@
+﻿@model IEnumerable<evaluacion1.Models.Autor>
+
+@{
+    ViewBag.Title = "Autores";
+}
+
+<h2>Autores</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.First().Nombre)</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.AutorID }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.AutorID })
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Bienvenido a la Biblioteca</h2>
+<p>Esta es una aplicación de gestión de biblioteca simplificada.</p>
+
+<a href="@Url.Action("Index", "Libros")" class="btn btn-primary">Ver Libros</a>
+<a href="@Url.Action("Create", "Libros")" class="btn btn-success">Agregar Libro</a>
+<a href="@Url.Action("Create", "Autores")" class="btn btn-warning">Agregar Autor</a>
